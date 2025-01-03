@@ -17,6 +17,9 @@ return {
       adapters = {},
     })
 
+    -- Set key for chat
+    vim.api.nvim_set_keymap("n", "<localleader>c", "<cmd>CodeCompanionChat Toggle<cr>", { silent = true })
+
     -- Set key for completion
     vim.api.nvim_set_keymap("i", "<C-y>", 'copilot#Accept("<CR>")', { noremap = true, silent = true, expr = true })
   end,
