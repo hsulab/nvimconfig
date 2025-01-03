@@ -9,9 +9,9 @@
 --    :Lazy update
 --
 -- NOTE: Here is where you install your plugins.
-require('lazy').setup({
+require("lazy").setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  "tpope/vim-sleuth", -- Detect tabstop and shiftwidth automatically
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -23,35 +23,41 @@ require('lazy').setup({
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
-  require 'plugins/gitsigns',
+  require("plugins/gitsigns"),
 
-  require 'plugins/which-key',
+  require("plugins/which-key"),
 
-  require 'plugins/telescope',
+  require("plugins/telescope"),
 
-  require 'plugins/lspconfig',
+  require("plugins/lspconfig"),
 
-  require 'plugins/conform',
+  require("plugins/conform"),
 
-  require 'plugins/cmp',
+  require("plugins/cmp"),
 
-  require 'plugins/catppuccin',
+  require("plugins/catppuccin"),
 
-  require 'plugins/treesitter',
+  require("plugins/treesitter"),
 
   -- The following comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
 
-  require 'plugins.codeium',
-  require 'plugins.autopairs',
-  require 'plugins.neo-tree',
+  -- require 'plugins.codeium',
+
+  require("plugins.codecompanion"),
+
+  require("plugins.copilot"),
+
+  require("plugins.autopairs"),
+
+  require("plugins.neo-tree"),
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  { import = 'custom.plugins' },
+  { import = "custom.plugins" },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
@@ -62,19 +68,19 @@ require('lazy').setup({
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
     icons = vim.g.have_nerd_font and {} or {
-      cmd = '⌘',
-      config = '🛠',
-      event = '📅',
-      ft = '📂',
-      init = '⚙',
-      keys = '🗝',
-      plugin = '🔌',
-      runtime = '💻',
-      require = '🌙',
-      source = '📄',
-      start = '🚀',
-      task = '📌',
-      lazy = '💤 ',
+      cmd = "⌘",
+      config = "🛠",
+      event = "📅",
+      ft = "📂",
+      init = "⚙",
+      keys = "🗝",
+      plugin = "🔌",
+      runtime = "💻",
+      require = "🌙",
+      source = "📄",
+      start = "🚀",
+      task = "📌",
+      lazy = "💤 ",
     },
   },
 })
