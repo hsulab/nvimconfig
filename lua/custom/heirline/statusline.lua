@@ -1,4 +1,4 @@
-local components = require 'custom.heirline.components'
+local components = require("custom.heirline.components")
 
 return { -- statusline
   components.RightPadding(components.ViMode, 2),
@@ -10,6 +10,7 @@ return { -- statusline
   components.Fill,
   components.RightPadding(components.ShowCmd),
   components.Fill,
+  components.RightPadding(components.CodeCompanion),
   components.RightPadding(components.ConformActive),
   components.RightPadding(components.LSPActive),
   components.RightPadding(components.FileType, 0),
