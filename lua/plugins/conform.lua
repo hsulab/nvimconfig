@@ -1,16 +1,16 @@
 return {
   { -- Autoformat
-    'stevearc/conform.nvim',
-    event = { 'BufWritePre' },
-    cmd = { 'ConformInfo' },
+    "stevearc/conform.nvim",
+    event = { "BufWritePre" },
+    cmd = { "ConformInfo" },
     keys = {
       {
-        '<leader>lf',
+        "<leader>lf",
         function()
-          require('conform').format { async = true, lsp_format = 'fallback' }
+          require("conform").format({ async = true, lsp_format = "fallback" })
         end,
-        mode = '',
-        desc = 'Format buffer',
+        mode = "",
+        desc = "Format buffer",
       },
     },
     opts = {
@@ -24,7 +24,7 @@ return {
         if disable_filetypes[vim.bo[bufnr].filetype] then
           return nil
         else
-          lsp_format_opt = 'fallback'
+          lsp_format_opt = "fallback"
           return {
             timeout_ms = 500,
             lsp_format = lsp_format_opt,
@@ -32,10 +32,10 @@ return {
         end
       end,
       formatters_by_ft = {
-        lua = { 'stylua' },
+        lua = { "stylua" },
         -- Conform can also run multiple formatters sequentially
-        python = { 'isort', 'black' },
-        rust = { 'rustfmt' },
+        python = { "isort", "ruff" },
+        rust = { "rustfmt" },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
@@ -43,13 +43,13 @@ return {
       formatters = {
         stylua = {
           args = {
-            '--indent-type',
-            'Spaces',
-            '--indent-width',
-            '2',
-            '--stdin-filepath',
-            '$FILENAME',
-            '-',
+            "--indent-type",
+            "Spaces",
+            "--indent-width",
+            "2",
+            "--stdin-filepath",
+            "$FILENAME",
+            "-",
           },
         },
       },
