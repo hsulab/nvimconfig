@@ -30,6 +30,9 @@ return {
       ["<Up>"] = { "select_prev", "fallback" },
       ["<Down>"] = { "select_next", "fallback" },
 
+      ["<Right>"] = { "snippet_forward", "fallback" },
+      ["<Left>"] = { "snippet_backward", "fallback" },
+
       ["<C-b>"] = { "scroll_documentation_up", "fallback" },
       ["<C-f>"] = { "scroll_documentation_down", "fallback" },
       cmdline = {
@@ -109,7 +112,7 @@ return {
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { "lsp", "path", "buffer", "codecompanion" },
+      default = { "lsp", "path", "snippets", "buffer", "codecompanion" },
     },
   },
   opts_extend = { "sources.default" },
