@@ -57,15 +57,6 @@ return {
           "fallback",
         },
 
-        ["<Esc>"] = {
-          function(cmp)
-            if cmp.is_visible() then
-              return cmp.hide()
-            end
-          end,
-          "fallback",
-        },
-
         ["<Up>"] = { "select_prev", "fallback" },
         ["<Down>"] = { "select_next", "fallback" },
       },
