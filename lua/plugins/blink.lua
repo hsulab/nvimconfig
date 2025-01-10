@@ -84,7 +84,6 @@ return {
           default_brackets = { "(", ")" },
           -- Overrides the default blocked filetypes
           override_brackets_for_filetypes = {},
-          },
         },
       },
       list = {
