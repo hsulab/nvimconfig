@@ -76,7 +76,17 @@ return {
     },
 
     completion = {
-      accept = { auto_brackets = { enabled = true } },
+      accept = {
+        auto_brackets = {
+          -- Whether to auto-insert brackets for functions
+          enabled = true,
+          -- Default brackets to use for unknown languages
+          default_brackets = { "(", ")" },
+          -- Overrides the default blocked filetypes
+          override_brackets_for_filetypes = {},
+          },
+        },
+      },
       list = {
         cycle = {
           from_bottom = true,
