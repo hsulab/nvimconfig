@@ -42,7 +42,7 @@ return {
         ["<Tab>"] = {
           function(cmp)
             if cmp.is_visible() then
-              return cmp.select_next()
+              return cmp.select_and_accept()
             else
               return cmp.show()
             end
