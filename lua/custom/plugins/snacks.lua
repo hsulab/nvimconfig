@@ -20,6 +20,15 @@ return {
     },
     -- statuscolumn = { enabled = true },  -- replace heirline?
     words = { enabled = true },
+    zen = {
+      toggles = {
+        dim = false,
+        git_signs = false,
+        mini_diff_signs = false,
+        -- diagnostics = false,
+        -- inlay_hints = false,
+      },
+    },
   },
   keys = {
     {
