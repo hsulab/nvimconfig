@@ -28,7 +28,6 @@ vim.keymap.set("n", "<down>", "")
 -- Keybinds to move between tabs
 vim.keymap.set("n", "<S-h>", "<cmd>bprev<cr>", { desc = "Move focus to the previous buffer" })
 vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Move focus to the next buffer" })
--- vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { desc = 'Close the current buffer' })
 
 -- Keybinds to make split navigation easier.
 --  Use CTRL+<hjkl> to switch between windows
@@ -38,6 +37,10 @@ vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move focus to the left wind
 vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move focus to the right window" })
 vim.keymap.set("n", "<C-j>", "<C-w><C-j>", { desc = "Move focus to the lower window" })
 vim.keymap.set("n", "<C-k>", "<C-w><C-k>", { desc = "Move focus to the upper window" })
+
+--- Keybinds to close windows and tabs
+vim.keymap.set("n", "<leader>q", "<cmd>q<cr>", { desc = "Close the current window" })
+-- vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { desc = 'Close the current buffer' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
