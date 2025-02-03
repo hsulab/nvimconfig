@@ -90,6 +90,10 @@ return {
         cycle = {
           from_bottom = true,
         },
+        selection = {
+          preselect = false,
+          auto_insert = true,
+        },
       },
       menu = {
         auto_show = function(ctx)
