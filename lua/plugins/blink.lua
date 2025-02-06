@@ -4,10 +4,12 @@ return {
   -- optional: provides snippets for the snippet source
   dependencies = {
     "rafamadriz/friendly-snippets",
+    "saghen/blink.compat",
+    "micangl/cmp-vimtex",
   },
 
   -- use a release tag to download pre-built binaries
-  version = "*",
+  version = "0.*",
   -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
   -- build = 'cargo build --release',
   -- If you use nix, you can build from source using latest nightly rust with:
@@ -125,7 +127,13 @@ return {
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { "lsp", "path", "snippets", "buffer", "codecompanion" },
+      default = { "lsp", "path", "snippets", "buffer", "codecompanion", "vimtex" },
+      providers = {
+        vimtex = {
+          name = "vimtex",
+          module = "blink.compat.source",
+        },
+      },
     },
   },
   opts_extend = { "sources.default" },
