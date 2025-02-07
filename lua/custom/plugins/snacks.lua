@@ -1,4 +1,5 @@
 local dashboard = require("custom.snacks.dashboard")
+local indent = require("custom.snacks.indent")
 
 return {
   "folke/snacks.nvim",
@@ -10,7 +11,7 @@ return {
     -- refer to the configuration section below
     bigfile = { enabled = true },
     dashboard = dashboard,
-    indent = { enabled = true }, -- replace indent_line
+    indent = indent, -- replace indent_line
     input = { enabled = true },
     -- notifier = { enabled = true },  -- replace nvim-notify?
     quickfile = { enabled = true },
