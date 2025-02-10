@@ -69,6 +69,7 @@ return {
     -- Document existing key chains
     require("which-key").add({
       { "<leader>c", group = "Close Buffer", hidden = true },
+      { "<leader>C", group = "Close Buffer", hidden = true },
       { "<leader>e", group = "Explorer", hidden = true },
       { "<leader>f", group = "Find", mode = "n" },
       { "<leader>g", group = "Git", mode = { "n", "v" } },
