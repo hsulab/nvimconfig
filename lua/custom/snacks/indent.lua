@@ -1,4 +1,6 @@
-return {
+local M = {}
+
+M.opts = {
   enabled = true,
   chunk = {
     -- when enabled, scopes will be rendered as chunks, except for the
@@ -19,3 +21,5 @@ return {
     },
   },
 }
+
+return M

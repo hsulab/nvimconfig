@@ -1,4 +1,5 @@
-return {
+local M = {}
+M.opts = {
   width = 60,
   row = nil, -- dashboard position. nil for center
   col = nil, -- dashboard position. nil for center
@@ -79,3 +80,5 @@ return {
     { section = "startup" },
   },
 }
+
+return M
