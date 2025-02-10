@@ -17,8 +17,8 @@ return {
   opts = {
     workspaces = {
       {
-        name = "test",
-        path = "~/Documents/KnowledgeBase/obsidian/vaults/test",
+        name = "notion",
+        path = "~/Documents/KnowledgeBase/obsidian/vaults/notion",
       },
       {
         name = "no-vault",
