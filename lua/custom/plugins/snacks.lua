@@ -32,6 +32,22 @@ return {
     },
   },
   keys = {
+    -- bufdelete
+    {
+      "<leader>c",
+      function()
+        Snacks.bufdelete()
+      end,
+      desc = "Delete Buffer",
+    },
+    {
+      "<leader>C",
+      function()
+        Snacks.bufdelete.other()
+      end,
+      desc = "Delete Buffer",
+    },
+    -- zen
     {
       "<leader>z",
       function()
