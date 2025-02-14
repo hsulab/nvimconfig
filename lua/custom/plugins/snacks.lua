@@ -25,5 +25,5 @@ return {
     words = { enabled = true },
     zen = zen.opts,
   },
-  keys = vim.tbl_extend("force", zen.keys, bufdelete.keys),
+  keys = vim.list_extend(zen.keys, bufdelete.keys),
 }
