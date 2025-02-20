@@ -21,6 +21,12 @@ return {
         shade = "dark",
         percentage = 0.15, -- percentage of the shade to apply to the inactive window
       },
+      custom_highlights = function(colors)
+        return {
+          StatusLine = { fg = colors.text, bg = colors.none },
+          StatusLineNC = { fg = colors.surface1, bg = colors.none },
+        }
+      end,
     })
     -- Load the colorscheme here.
     -- Like many other themes, this one has different styles:
