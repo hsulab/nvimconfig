@@ -1,7 +1,7 @@
 return {
   "m4xshen/smartcolumn.nvim",
   opts = {
-    colorcolumn = "80",
+    colorcolumn = "120",
     disabled_filetypes = {
       "help",
       "text",
@@ -15,7 +15,7 @@ return {
       "noice",
       "Trouble",
     },
-    custom_colorcolumn = { python = "80", tex = "120" },
+    custom_colorcolumn = { python = "120", tex = "120" },
     scope = "file",
     editorconfig = true,
   },
