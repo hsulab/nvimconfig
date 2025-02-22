@@ -37,7 +37,9 @@ return {
 
       ["<C-b>"] = { "scroll_documentation_up", "fallback" },
       ["<C-f>"] = { "scroll_documentation_down", "fallback" },
-      cmdline = {
+    },
+    cmdline = {
+      keymap = {
         preset = "none",
         ["<CR>"] = { "accept", "fallback" },
 
@@ -54,7 +56,7 @@ return {
         ["<S-Tab>"] = {
           function(cmp)
             if cmp.is_visible() then
-              return cmp.select_prev()
+              return cmp.select_next()
             else
               return cmp.show()
             end
