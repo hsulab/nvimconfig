@@ -13,6 +13,7 @@ return {
     -- refer to the configuration section below
     bigfile = { enabled = true },
     dashboard = dashboard.opts,
+    image = { enabled = true },
     indent = indent.opts, -- replace indent_line
     input = { enabled = true },
     -- notifier = { enabled = true },  -- replace nvim-notify?
