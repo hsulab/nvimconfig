@@ -1,5 +1,6 @@
 return {
   "olimorris/codecompanion.nvim",
+  event = "BufEnter",
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-treesitter/nvim-treesitter",
