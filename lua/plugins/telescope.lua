@@ -63,8 +63,8 @@ return {
           layout_strategy = "horizontal",
           layout_config = {
             height = 0.9,
-            preview_cutoff = 80,
-            preview_width = 80,
+            preview_cutoff = 40,
+            preview_width = 0.6,
             prompt_position = "top",
             width = 0.9,
           },
