@@ -74,7 +74,7 @@ return {
       { "<leader>f", group = "Find", mode = "n" },
       { "<leader>g", group = "Git", mode = { "n", "v" } },
       { "<leader>l", group = "Lsp", mode = "n", icon = "󰿘 " },
-      { "<leader>o", group = "Oil", hidden = true },
+      -- { "<leader>o", group = "Oil", hidden = true },
       { "<leader>p", group = "Package", mode = "n", icon = " " },
       { "<leader>q", group = "Quit", mode = "n", hidden = true },
       { "<leader>r", group = "Overseer", mode = "n", icon = "󰑮 " },
