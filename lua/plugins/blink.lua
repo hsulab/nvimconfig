@@ -149,10 +149,16 @@ return {
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
       default = { "lsp", "path", "snippets", "buffer", "codecompanion", "vimtex" },
+      per_filetype = { org = { "orgmode" } },
       providers = {
         vimtex = {
           name = "vimtex",
           module = "blink.compat.source",
+        },
+        orgmode = {
+          name = "Orgmode",
+          module = "orgmode.org.autocompletion.blink",
+          fallbacks = { "buffer" },
         },
       },
     },
