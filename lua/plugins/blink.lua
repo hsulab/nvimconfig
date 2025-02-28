@@ -39,6 +39,7 @@ return {
       ["<C-f>"] = { "scroll_documentation_down", "fallback" },
     },
     cmdline = {
+      enabled = true,
       keymap = {
         preset = "none",
         ["<CR>"] = { "accept", "fallback" },
@@ -66,6 +67,24 @@ return {
 
         ["<Up>"] = { "select_prev", "fallback" },
         ["<Down>"] = { "select_next", "fallback" },
+      },
+      completion = {
+        trigger = {
+          show_on_blocked_trigger_characters = {},
+          show_on_x_blocked_trigger_characters = {},
+        },
+        list = {
+          selection = {
+            -- When `true`, will automatically select the first item in the completion list
+            preselect = false,
+            -- When `true`, inserts the completion item automatically when selecting it
+            auto_insert = false,
+          },
+        },
+        -- Whether to automatically show the window when new completion items are available
+        menu = { auto_show = false },
+        -- Displays a preview of the selected item on the current line
+        ghost_text = { enabled = true },
       },
     },
 
