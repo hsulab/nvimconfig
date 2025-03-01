@@ -11,7 +11,7 @@ return {
       org_capture_templates = {
         f = {
           description = "Fixme",
-          template = "* TODO %? %x",
+          template = "* TODO %t %? %x",
           target = "~/Documents/orgfiles/fixme.org",
         },
         r = {
