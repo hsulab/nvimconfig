@@ -15,9 +15,9 @@ return {
           target = "~/Documents/orgfiles/fixme.org",
         },
         r = {
-          description = "Repo",
-          template = "* [[%x][%(return string.match('%x', '([^/]+)$'))]]%?",
-          target = "~/Documents/orgfiles/repos.org",
+          description = "Research",
+          template = "* TODO %t %? %x",
+          target = "~/Documents/orgfiles/research.org",
         },
       },
     })
