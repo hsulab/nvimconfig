@@ -2,12 +2,17 @@ return {
   "lervag/vimtex",
   -- event = "BufEnter *.tex",
   config = function()
-    vim.g.vimtex_view_method = "skim"
-    vim.g.vimtex_view_skim_sync = 1
-    vim.g.vimtex_view_skim_activate = 1
+    --- skim ---
+    -- vim.g.vimtex_view_method = "skim"
+    -- vim.g.vimtex_view_skim_sync = 1
+    -- vim.g.vimtex_view_skim_activate = 1
+    -- vim.g.vimtex_matchparen_enabled = 0
+    -- vim.g.vimtex_delim_stopline = 100
+    -- vim.g.vimtex_compiler_callback_hooks = ['UpdateSkim']
+    vim.g.vimtex_view_method = "sioyek"
+    vim.g.vimtex_view_sioyek_exe = "/Applications/sioyek.app/Contents/MacOS/sioyek"
     vim.g.vimtex_matchparen_enabled = 0
     vim.g.vimtex_delim_stopline = 100
-    -- vim.g.vimtex_compiler_callback_hooks = ['UpdateSkim']
   end,
   -- opts = {
   --   autocmds = {
