@@ -33,6 +33,7 @@ return {
     image = image.opts,
     indent = indent.opts, -- replace indent_line
     input = { enabled = true },
+    lazygit = lazygit.opts,
     -- notifier = { enabled = true },  -- replace nvim-notify?
     quickfile = { enabled = true },
     scroll = {

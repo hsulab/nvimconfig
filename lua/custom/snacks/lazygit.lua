@@ -29,7 +29,10 @@ M.opts = {
     unstagedChangesColor = { fg = "DiagnosticError" },
   },
   win = {
-    style = "lazygit",
+    style = {
+      height = 0.9,
+      width = 0.9,
+    },
   },
 }
 
