@@ -16,10 +16,10 @@ return {
   },
   opts = {
     workspaces = {
-      {
-        name = "notion",
-        path = "~/Documents/KnowledgeBase/obsidian/vaults/notion",
-      },
+      -- {
+      --   name = "notion",
+      --   path = "~/Documents/KnowledgeBase/obsidian/vaults/notion",
+      -- },
       {
         name = "no-vault",
         path = function()
