@@ -23,6 +23,7 @@ return {
       },
       custom_highlights = function(colors)
         return {
+          Folded = { fg = colors.blue, bg = colors.surface1 },
           StatusLine = { fg = colors.text, bg = colors.none },
           StatusLineNC = { fg = colors.surface1, bg = colors.none },
         }
