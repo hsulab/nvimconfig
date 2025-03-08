@@ -27,9 +27,9 @@ require("lazy").setup({
 
   require("plugins/which-key"),
 
-  require("plugins/telescope"),
+  -- require("plugins/telescope"), -- use snacks.picker instead
 
-  require("plugins/telescope-orgmode"),
+  -- require("plugins/telescope-orgmode"),
 
   require("plugins/lspconfig"),
 
