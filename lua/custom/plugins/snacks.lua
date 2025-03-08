@@ -4,6 +4,7 @@ local explorer = require("custom.snacks.explorer")
 local image = require("custom.snacks.image")
 local indent = require("custom.snacks.indent")
 local lazygit = require("custom.snacks.lazygit")
+local picker = require("custom.snacks.picker")
 local zen = require("custom.snacks.zen")
 
 local keys = {}
@@ -11,6 +12,7 @@ keys = vim.list_extend(keys, bufdelete.keys)
 keys = vim.list_extend(keys, explorer.keys)
 keys = vim.list_extend(keys, image.keys)
 keys = vim.list_extend(keys, lazygit.keys)
+keys = vim.list_extend(keys, picker.keys)
 keys = vim.list_extend(keys, zen.keys)
 
 return {
@@ -38,6 +40,7 @@ return {
     input = { enabled = true },
     lazygit = lazygit.opts,
     -- notifier = { enabled = true },  -- replace nvim-notify?
+    picker = picker.opts,
     quickfile = { enabled = true },
     scroll = {
       enabled = true,
