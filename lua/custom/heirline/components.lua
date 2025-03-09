@@ -334,7 +334,7 @@ M.Diagnostics = {
     error_icon = " ",
     warn_icon = " ",
     info_icon = " ",
-    hint_icon = " ",
+    hint_icon = " ",
   },
 
   init = function(self)
