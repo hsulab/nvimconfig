@@ -9,10 +9,14 @@ return {
     -- vim.g.vimtex_matchparen_enabled = 0
     -- vim.g.vimtex_delim_stopline = 100
     -- vim.g.vimtex_compiler_callback_hooks = ['UpdateSkim']
+    --- sioyek ---
     vim.g.vimtex_view_method = "sioyek"
     vim.g.vimtex_view_sioyek_exe = "/Applications/sioyek.app/Contents/MacOS/sioyek"
     vim.g.vimtex_matchparen_enabled = 0
     vim.g.vimtex_delim_stopline = 100
+    --- zathura ---
+    -- vim.g.vimtex_view_method = "zathura_simple"
+    -- vim.g.vimtex_view_zathura_use_synctex = 1
   end,
   -- opts = {
   --   autocmds = {
