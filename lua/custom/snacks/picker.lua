@@ -55,7 +55,7 @@ M.keys = {
   {
     "<leader>fn",
     function()
-      Snacks.picker.notifications()
+      Snacks.picker.noice()
     end,
     desc = "Notification History",
   },
