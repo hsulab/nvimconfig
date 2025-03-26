@@ -1,6 +1,26 @@
 local M = {}
 
-M.opts = {}
+M.opts = {
+  sources = {
+    explorer = {
+      preview = false,
+      layout = {
+        layout = {
+          backdrop = false,
+          row = 1,
+          width = 0.6,
+          min_width = 80,
+          height = 0.8,
+          border = "none",
+          box = "vertical",
+          { win = "input", height = 1, border = "rounded", title = "{title} {live} {flags}", title_pos = "center" },
+          { win = "list", border = "rounded" },
+          { win = "preview", title = "{preview}", border = "rounded" },
+        },
+      },
+    },
+  },
+}
 
 M.keys = {
   {
