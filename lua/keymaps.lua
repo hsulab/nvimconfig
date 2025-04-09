@@ -43,6 +43,9 @@ vim.keymap.set("n", "<S-l>", "<cmd>bnext<cr>", { desc = "Move focus to the next 
 vim.keymap.set("n", "<leader>q", "<cmd>q<cr>", { desc = "Close the current window" })
 -- vim.keymap.set('n', '<leader>c', '<cmd>bd<cr>', { desc = 'Close the current buffer' })
 
+--- Keybinds to save buffer
+vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Write the current buffer" })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 

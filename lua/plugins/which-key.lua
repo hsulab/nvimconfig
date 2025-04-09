@@ -80,6 +80,7 @@ return {
       { "<leader>r", group = "Overseer", mode = "n", icon = "󰑮 " },
       { "<leader>s", group = "Session", mode = "n" },
       { "<leader>t", group = "Terminal", mode = "n" },
+      { "<leader>w", group = "Write", mode = "n", hidden = true },
       { "<leader>z", group = "Zen Mode", hidden = true },
       { "<leader>Z", group = "Zen Mode", hidden = true },
       { "<leader>/", group = "Comment", hidden = true },
