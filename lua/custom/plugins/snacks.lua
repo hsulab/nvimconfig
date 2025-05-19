@@ -1,6 +1,6 @@
 local bufdelete = require("custom.snacks.bufdelete")
 local dashboard = require("custom.snacks.dashboard")
-local explorer = require("custom.snacks.explorer")
+-- local explorer = require("custom.snacks.explorer")
 local image = require("custom.snacks.image")
 local indent = require("custom.snacks.indent")
 local lazygit = require("custom.snacks.lazygit")
@@ -9,7 +9,7 @@ local zen = require("custom.snacks.zen")
 
 local keys = {}
 keys = vim.list_extend(keys, bufdelete.keys)
-keys = vim.list_extend(keys, explorer.keys)
+-- keys = vim.list_extend(keys, explorer.keys)
 keys = vim.list_extend(keys, image.keys)
 keys = vim.list_extend(keys, lazygit.keys)
 keys = vim.list_extend(keys, picker.keys)
@@ -34,7 +34,7 @@ return {
     -- refer to the configuration section below
     bigfile = { enabled = true },
     dashboard = dashboard.opts,
-    explorer = explorer.opts,
+    -- explorer = explorer.opts,
     image = image.opts,
     indent = indent.opts, -- replace indent_line
     input = { enabled = true },
