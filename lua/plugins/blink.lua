@@ -1,11 +1,12 @@
 return {
   "saghen/blink.cmp",
-  event = "InsertEnter",
+  event = { "InsertEnter" },
+  -- event = { "BufReadPost", "BufNewFile" },
   -- optional: provides snippets for the snippet source
   dependencies = {
     "rafamadriz/friendly-snippets",
     "saghen/blink.compat",
-    "micangl/cmp-vimtex",
+    { "micangl/cmp-vimtex", event = "InsertEnter", ft = "tex" },
   },
 
   -- use a release tag to download pre-built binaries
