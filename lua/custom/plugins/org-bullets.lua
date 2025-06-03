@@ -1,7 +1,8 @@
 return {
   "nvim-orgmode/org-bullets.nvim",
-  event = "VeryLazy",
+  event = "BufEnter *.org",
   ft = { "org" },
+  lazy = true,
   config = function()
     require("org-bullets").setup({
       concealcursor = false, -- If false then when the cursor is on a line underlying characters are visible

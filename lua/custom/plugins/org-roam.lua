@@ -1,5 +1,8 @@
 return {
   "chipsenkbeil/org-roam.nvim",
+  event = "BufEnter *.org",
+  ft = { "org" },
+  lazy = true,
   tag = "0.1.1",
   dependencies = {
     {

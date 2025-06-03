@@ -1,7 +1,8 @@
 return {
   "nvim-orgmode/orgmode",
-  event = "VeryLazy",
+  event = "BufEnter *.org",
   ft = { "org" },
+  lazy = true,
   config = function()
     -- Setup orgmode
     require("orgmode").setup({
@@ -13,6 +14,11 @@ return {
           description = "Fixme",
           template = "* TODO %t %? %x",
           target = "~/Documents/orgfiles/fixme.org",
+        },
+        i = {
+          description = "Idea",
+          template = "* TODO %t %? %x",
+          target = "~/Documents/orgfiles/ideas.org",
         },
         r = {
           description = "Research",
