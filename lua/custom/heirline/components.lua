@@ -223,7 +223,7 @@ M.LSPActive = {
   provider = function()
     local names = {}
     ---@diagnostic disable-next-line: deprecated
-    for _, server in pairs(vim.lsp.get_active_clients({ bufnr = 0 })) do
+    for _, server in pairs(vim.lsp.get_clients({ bufnr = 0 })) do
       local name = server.name
       if server.name == "GitHub Copilot" then
         name = "copilot"
