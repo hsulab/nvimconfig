@@ -26,5 +26,8 @@ require("lazy-plugins")
 vim.keymap.set("n", "<leader>pi", "<cmd>Lazy<cr>", { desc = "Lazy" })
 vim.keymap.set("n", "<leader>pm", "<cmd>Mason<cr>", { desc = "Mason" })
 
+-- [[ Configure LSP ]]
+require("lsp")
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
