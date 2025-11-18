@@ -112,6 +112,5 @@ if vim.g.have_nerd_font then
   vim.diagnostic.config({
     signs = { text = diagnostic_signs },
     float = { border = "rounded" },
-    update_in_insert = false,
   })
 end

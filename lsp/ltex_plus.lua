@@ -82,6 +82,7 @@ return {
         "typst",
         "xhtml",
       },
+      checkFrequency = "save",
     },
   },
 }
