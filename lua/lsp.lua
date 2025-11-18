@@ -1,10 +1,12 @@
 vim.lsp.enable("clangd")
 vim.lsp.enable("fortls")
 vim.lsp.enable("gopls")
+vim.lsp.enable("ltex_plus")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")
 vim.lsp.enable("rust-analyzer")
 vim.lsp.enable("tailwindcss")
+vim.lsp.enable("tinymist")
 
 --  This function gets run when an LSP attaches to a particular buffer.
 --    That is to say, every time a new file is opened that is associated with
@@ -100,3 +102,16 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
   end,
 })
+
+if vim.g.have_nerd_font then
+  local signs = { ERROR = "", WARN = "", INFO = "", HINT = "" }
+  local diagnostic_signs = {}
+  for type, icon in pairs(signs) do
+    diagnostic_signs[vim.diagnostic.severity[type]] = icon
+  end
+  vim.diagnostic.config({
+    signs = { text = diagnostic_signs },
+    float = { border = "rounded" },
+    update_in_insert = false,
+  })
+end

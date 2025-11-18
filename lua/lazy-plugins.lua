@@ -31,7 +31,7 @@ require("lazy").setup({
 
   -- require("plugins/telescope-orgmode"),
 
-  require("plugins/lspconfig"),
+  require("plugins/mason"),
 
   require("plugins/conform"),
 
