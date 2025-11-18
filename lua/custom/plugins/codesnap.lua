@@ -7,8 +7,8 @@ return {
   },
   opts = {
     save_path = "~/Pictures/codesnap",
-    has_breadcrumbs = true,
-    bg_theme = "bamboo",
+    has_breadcrumbs = false,
+    -- bg_theme = "bamboo",
     bg_padding = 0,
   },
 }
