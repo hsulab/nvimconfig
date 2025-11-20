@@ -51,7 +51,7 @@ require("lazy").setup({
 
   -- require 'plugins.codeium',
 
-  require("plugins.codecompanion"),
+  -- require("plugins.codecompanion"),
 
   require("plugins.copilot"),
 
