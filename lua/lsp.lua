@@ -100,6 +100,20 @@ vim.api.nvim_create_autocmd("LspAttach", {
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = event.buf }))
       end, "Inlay [H]ints")
     end
+
+    -- Diagnostic keymaps
+    -- vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+    vim.keymap.set("n", "<leader>ld", vim.diagnostic.open_float, { desc = "Show diagnostics" })
+    -- vim.keymap.del("n", "<C-w>d") -- show diagnostic
+    -- vim.keymap.del("n", "<C-w><C-D>") -- show diagnostic
+    vim.keymap.set("n", "<leader>lD", function()
+      local has_virtual_lines = vim.diagnostic.config().virtual_lines
+      if has_virtual_lines then
+        vim.diagnostic.config({ virtual_lines = false })
+      else
+        vim.diagnostic.config({ virtual_lines = { current_line = true } })
+      end
+    end, { desc = "Toggle diagnostic virtual lines" })
   end,
 })
 
@@ -114,3 +128,7 @@ if vim.g.have_nerd_font then
     float = { border = "rounded" },
   })
 end
+
+vim.diagnostic.config({
+  virtual_lines = { current_line = true },
+})
