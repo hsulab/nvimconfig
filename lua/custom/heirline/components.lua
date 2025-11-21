@@ -244,6 +244,15 @@ M.ConformActive = {
   update = { "BufEnter" },
   provider = function(self)
     local formatters = self.conform.list_formatters_for_buffer(self.bufnr)
+    -- rename ruff_format and ruff_organize_imports to ruff for brevity
+    for i, formatter in ipairs(formatters) do
+      if formatter == "ruff_format" then
+        formatters[i] = "rufff"
+      end
+      if formatter == "ruff_organize_imports" then
+        formatters[i] = "ruffi"
+      end
+    end
     return formatters and table.concat(formatters, ",") or "None"
   end,
   hl = { fg = palette.green, bold = true },

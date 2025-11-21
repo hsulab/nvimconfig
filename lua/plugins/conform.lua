@@ -38,7 +38,7 @@ return {
         json = { "prettier" },
         sh = { "shfmt" },
         go = { "gofmt", "goimports" },
-        python = { "ruff_fmt", "ruff_organize_imports" },
+        python = { "ruff_format", "ruff_organize_imports" },
         rust = { "rustfmt" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
