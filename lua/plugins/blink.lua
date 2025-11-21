@@ -6,22 +6,6 @@ return {
   dependencies = {
     "rafamadriz/friendly-snippets",
     "saghen/blink.compat",
-    -- { "micangl/cmp-vimtex", event = "InsertEnter", ft = "tex" },
-    {
-      "krissen/blink-cmp-bibtex",
-      event = "InsertEnter",
-      ft = { "tex", "typst" },
-      config = function()
-        require("blink-cmp-bibtex").setup({
-          filetypes = { "tex", "plaintex", "markdown", "rmd", "typst" },
-          files = { vim.fn.expand("~/research/global.bib") },
-          search_paths = { "references.bib", "bib/*.bib" },
-          root_markers = { ".git", "texmf.cnf" },
-          citation_commands = { "cite", "parencite", "textcite" },
-          preview_style = "ieee", -- or "apa" (default)
-        })
-      end,
-    },
   },
 
   -- use a release tag to download pre-built binaries
@@ -164,7 +148,7 @@ return {
     -- Default list of enabled providers defined so that you can extend it
     -- elsewhere in your config, without redefining it, due to `opts_extend`
     sources = {
-      default = { "lsp", "path", "snippets", "buffer", "bibtex" },
+      default = { "lsp", "path", "snippets", "buffer" },
       per_filetype = {
         org = { inherit_defaults = true, "orgmode" },
         -- tex = { inherit_defaults = true, "bibtex" },
