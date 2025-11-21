@@ -4,6 +4,8 @@ vim.lsp.enable("gopls")
 vim.lsp.enable("ltex_plus")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("pyright")
+-- vim.lsp.enable("basedpyright")
+-- vim.lsp.enable("ruff")
 vim.lsp.enable("rust-analyzer")
 vim.lsp.enable("tailwindcss")
 vim.lsp.enable("tinymist")
@@ -130,5 +132,6 @@ if vim.g.have_nerd_font then
 end
 
 vim.diagnostic.config({
-  virtual_lines = { current_line = true },
+  virtual_text = true,
+  virtual_lines = false,
 })

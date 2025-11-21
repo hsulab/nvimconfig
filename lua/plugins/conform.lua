@@ -38,7 +38,7 @@ return {
         json = { "prettier" },
         sh = { "shfmt" },
         go = { "gofmt", "goimports" },
-        python = { "isort", "black" },
+        python = { "ruff_fmt", "ruff_organize_imports" },
         rust = { "rustfmt" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
@@ -48,6 +48,10 @@ return {
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
       },
       formatters = {
+        -- ruff_fmt = {
+        --   command = "ruff",
+        --   args = { "format", "--stdin-filename", "$FILENAME", "-" },
+        -- },
         stylua = {
           args = {
             "--indent-type",
