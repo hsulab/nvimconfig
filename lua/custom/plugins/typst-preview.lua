@@ -9,10 +9,19 @@ return {
     },
   }, -- lazy.nvim will implicitly calls `setup {}`
   keys = {
-    {
-      "<localleader>ll",
-      "<cmd>TypstPreview<cr>",
-      desc = "Toggle Typst Preview",
-    },
   },
+  config = function (_, opts)
+    require("typst-preview").setup(opts)
+    vim.api.nvim_create_autocmd("FileType", {
+      pattern = "typst",
+      callback = function ()
+        vim.keymap.set(
+          "n",
+          "<localleader>ll",
+          "<cmd>TypstPreview<cr>",
+          { desc = "Toggle Typst Preview" }
+        )
+      end,
+    })
+  end,
 }
