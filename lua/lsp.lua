@@ -9,6 +9,7 @@ vim.lsp.enable("pyright")
 vim.lsp.enable("rust-analyzer")
 vim.lsp.enable("tailwindcss")
 vim.lsp.enable("tinymist")
+vim.lsp.enable("ts_ls")
 
 --  This function gets run when an LSP attaches to a particular buffer.
 --    That is to say, every time a new file is opened that is associated with
