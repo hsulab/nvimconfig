@@ -11,6 +11,75 @@ vim.lsp.enable("tailwindcss")
 vim.lsp.enable("tinymist")
 vim.lsp.enable("ts_ls")
 
+local function jump_to_current_function_start()
+  local params = { textDocument = vim.lsp.util.make_text_document_params() }
+  local responses = vim.lsp.buf_request_sync(0, "textDocument/documentSymbol", params, 1000)
+  if not responses then
+    return
+  end
+
+  local pos = vim.api.nvim_win_get_cursor(0)
+  local line = pos[1] - 1
+
+  local function find_symbol(symbols)
+    for _, s in ipairs(symbols) do
+      local range = s.range or (s.location and s.location.range)
+      if range and line >= range.start.line and line <= range["end"].line then
+        if s.children then
+          local child = find_symbol(s.children)
+          if child then
+            return child
+          end
+        end
+        return s
+      end
+    end
+  end
+
+  for _, resp in pairs(responses) do
+    local sym = find_symbol(resp.result or {})
+    if sym and sym.range then
+      vim.api.nvim_win_set_cursor(0, { sym.range.start.line + 1, 0 })
+      return
+    end
+  end
+end
+
+local function jump_to_current_function_end()
+  local params = { textDocument = vim.lsp.util.make_text_document_params() }
+  local responses = vim.lsp.buf_request_sync(0, "textDocument/documentSymbol", params, 1000)
+  if not responses then
+    return
+  end
+
+  local pos = vim.api.nvim_win_get_cursor(0)
+  local line = pos[1] - 1
+
+  local function find_symbol(symbols)
+    for _, s in ipairs(symbols) do
+      local range = s.range or (s.location and s.location.range)
+      if range and line >= range.start.line and line <= range["end"].line then
+        if s.children then
+          local child = find_symbol(s.children)
+          if child then
+            return child
+          end
+        end
+        return s
+      end
+    end
+  end
+
+  for _, resp in pairs(responses) do
+    local sym = find_symbol(resp.result or {})
+    if sym and sym.range then
+      -- jump to end of the symbol
+      vim.api.nvim_win_set_cursor(0, { sym.range["end"].line + 1, 0 })
+      return
+    end
+  end
+end
+
 --  This function gets run when an LSP attaches to a particular buffer.
 --    That is to say, every time a new file is opened that is associated with
 --    an lsp (for example, opening `main.rs` is associated with `rust_analyzer`) this
@@ -27,6 +96,9 @@ vim.api.nvim_create_autocmd("LspAttach", {
       mode = mode or "n"
       vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
     end
+
+    vim.keymap.set("n", "[f", jump_to_current_function_start, { desc = "Jump to start of current function" })
+    vim.keymap.set("n", "]f", jump_to_current_function_end, { desc = "Jump to end of current function" })
 
     -- Jump to the definition of the word under your cursor.
     --  This is where a variable was first declared, or where a function is defined, etc.
