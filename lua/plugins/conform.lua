@@ -20,7 +20,7 @@ return {
         -- have a well standardized coding style. You can add additional
         -- languages here or re-enable it for the disabled ones.
         local disable_filetypes =
-          { c = true, cpp = true, go = true, lua = true, python = true, rust = true, typst = true }
+          { c = true, cpp = true, go = true, lua = true, python = true, fortran = true, rust = true, typst = true }
         local lsp_format_opt
         if disable_filetypes[vim.bo[bufnr].filetype] then
           return nil
@@ -39,6 +39,7 @@ return {
         sh = { "shfmt" },
         go = { "gofmt", "goimports" },
         python = { "ruff_format", "ruff_organize_imports" },
+        fortran = { "fprettify" },
         rust = { "rustfmt" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
@@ -62,6 +63,22 @@ return {
             "$FILENAME",
             "-",
           },
+        },
+        fprettify = {
+          inherit = false,
+          command = "fprettify",
+          args = {
+            "$FILENAME",
+            "--silent",
+            "--indent",
+            "4",
+            "--case",
+            "1",
+            "0",
+            "0",
+            "0",
+          },
+          stdin = false,
         },
       },
     },
