@@ -54,6 +54,26 @@ end
 return {
   cmd = { "rust-analyzer" },
   filetypes = { "rust" },
+  settings = {
+    ["rust-analyzer"] = {
+      cachePriming = {
+        enable = false,
+      },
+      cargo = {
+        allTargets = false,
+      },
+      check = {
+        allTargets = false,
+      },
+      lru = {
+        capacity = 32,
+      },
+      numThreads = 2,
+      procMacro = {
+        processes = 1,
+      },
+    },
+  },
   root_dir = function(bufnr, on_dir)
     local fname = vim.api.nvim_buf_get_name(bufnr)
     local reused_dir = is_library(fname)
