@@ -3,7 +3,10 @@ return {
   ft = "typst",
   version = "1.*",
   opts = {
-    open_cmd = 'qutebrowser "%s"', -- command to open the preview window
+    -- open_cmd = 'qutebrowser "%s"', -- command to open the preview window
+    -- open_cmd = 'open -a Safari "%s"',
+    open_cmd = 'open -a Firefox "%s"',
+    -- open_cmd = '/Applications/Firefox.app/Contents/MacOS/firefox %s -P typst-preview --class typst-preview',
     dependencies_bin = {
       ["tinymist"] = "tinymist",
     },
