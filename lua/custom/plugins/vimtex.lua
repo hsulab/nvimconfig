@@ -17,6 +17,11 @@ return {
     --- zathura ---
     -- vim.g.vimtex_view_method = "zathura_simple"
     -- vim.g.vimtex_view_zathura_use_synctex = 1
+    --- general ---
+    vim.g.vimtex_compiler_latexmk = {
+      aux_dir = "./.latexmk/aux",
+      out_dir = "./.latexmk/out",
+    }
   end,
   -- opts = {
   --   autocmds = {
