@@ -10,6 +10,7 @@ vim.lsp.enable("rust-analyzer")
 vim.lsp.enable("tailwindcss")
 vim.lsp.enable("tinymist")
 vim.lsp.enable("ts_ls")
+vim.lsp.enable("zls")
 
 local function jump_to_current_function_start()
   local params = { textDocument = vim.lsp.util.make_text_document_params() }
