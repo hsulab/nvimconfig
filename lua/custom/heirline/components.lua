@@ -224,11 +224,7 @@ M.LSPActive = {
     local names = {}
     ---@diagnostic disable-next-line: deprecated
     for _, server in pairs(vim.lsp.get_clients({ bufnr = 0 })) do
-      local name = server.name
-      if server.name == "GitHub Copilot" then
-        name = "copilot"
-      end
-      table.insert(names, name)
+      table.insert(names, server.name)
     end
     return table.concat(names, ",")
   end,

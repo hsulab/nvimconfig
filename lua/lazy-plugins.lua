@@ -55,8 +55,6 @@ require("lazy").setup({
 
   -- require("plugins.codecompanion"),
 
-  require("plugins.copilot"),
-
   -- require("plugins.neo-tree"), -- may use snacks.explorer instead
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
